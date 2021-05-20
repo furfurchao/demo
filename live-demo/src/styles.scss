@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+.desktop-capturer-selection__list{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    .desktop-capturer-selection__item{
+      border-radius: 8px;
+      background: #FFFFFF;
+      padding: 10px;
+      .selected{
+        border: 2px solid #CE9641 !important;
+      }
+      .desktop-capturer-selection__btn{
+        border: 2px solid #FFFFFF;
+        padding: 10px;
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        outline: none;
+        background: #FFFFFF;
+        cursor: pointer;
+        .desktop-capturer-selection__thumbnail{
+          height: 84px;
+          width: 150px;
+        }
+        .desktop-capturer-selection__name{
+          width: 150px;
+          text-align: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }

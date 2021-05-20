@@ -1,0 +1,60 @@
+Arguments: 
+  /usr/local/Cellar/node/15.4.0/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Users/icepoint1999/.rvm/gems/ruby-2.6.1/bin:/Users/icepoint1999/.rvm/gems/ruby-2.6.1@global/bin:/Users/icepoint1999/.rvm/rubies/ruby-2.6.1/bin:/Users/icepoint1999/flutter/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/rabbitmq/sbin:/Users/icepoint1999/.rvm/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  15.4.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://github.com/versatica/mediasoup: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141124:19)
+      at listOnTimeout (node:internal/timers:556:17)
+      at processTimers (node:internal/timers:499:7)
+
+npm manifest: 
+  {
+    "name": "mediasoup-demo-server",
+    "version": "3.0.0",
+    "private": true,
+    "description": "mediasoup demo server",
+    "author": "Iñaki Baz Castillo <ibc@aliax.net>",
+    "license": "All Rights Reserved",
+    "main": "lib/index.js",
+    "scripts": {
+      "lint": "eslint -c .eslintrc.js server.js lib connect.js",
+      "start": "DEBUG=${DEBUG:='*mediasoup* *INFO* *WARN* *ERROR*'} INTERACTIVE=${INTERACTIVE:='true'} node server.js",
+      "connect": "node connect.js"
+    },
+    "dependencies": {
+      "@sitespeed.io/throttle": "^0.5.4",
+      "awaitqueue": "^2.3.3",
+      "body-parser": "^1.19.0",
+      "colors": "^1.4.0",
+      "debug": "^4.3.1",
+      "express": "^4.17.1",
+      "heapdump": "^0.3.15",
+      "mediasoup": "github:versatica/mediasoup#v3",
+      "pidusage": "^2.0.21",
+      "protoo-server": "^4.0.5"
+    },
+    "devDependencies": {
+      "eslint": "^6.8.0",
+      "gulp": "^4.0.2",
+      "gulp-eslint": "^6.0.0",
+      "gulp-plumber": "^1.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

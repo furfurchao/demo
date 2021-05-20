@@ -1,0 +1,24 @@
+<div nz-row>
+  <div nz-col [nzSpan]="4">
+    <input [(ngModel)]="ip" nz-input>
+    <button nz-button (click)="join()">加入</button>
+    <div *ngFor="let item of messages">
+      {{item}}
+    </div>
+    <p>{{now | date:'fullDate'}} {{now | date:'h:mm:ss a'}}</p>
+  </div>
+  <div nz-col [nzSpan]="19" [nzOffset]="1">
+    <div nz-row>
+      <ng-container *ngFor="let item of consumers">
+        <nz-col [nzSpan]="24">
+          <app-consumer [consumer]="item"></app-consumer>
+        </nz-col>
+
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+
+
+

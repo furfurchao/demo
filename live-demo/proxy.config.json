@@ -1,0 +1,22 @@
+{
+  "/rooms/*": {
+    "target": "http://localhost:6666",
+    "secure": false,
+    "protocol": "http",
+    "logLevel": "debug"
+  },
+  "/oauth/*": {
+    "target": "http://localhost:6666",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/uploads/*": {
+    "target": "http://localhost:6666",
+    "secure": false
+  },
+  "/websocket": {
+    "target": "ws://localhost:6666",
+    "secure": false,
+    "ws": true
+  }
+}

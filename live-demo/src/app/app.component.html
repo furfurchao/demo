@@ -1,0 +1,33 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div>
+
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <li nz-menu-item>房间：<input style="width: 80px" [(ngModel)]="name" nz-input></li>
+      <li nz-menu-item (click)="start()">开启直播</li>
+      <li nz-menu-item (click)="addWindow()">添加窗口</li>
+    </ul>
+  </nz-header>
+  <nz-content>
+    <div style="position: relative">
+      <ng-container *ngFor="let item of windows">
+        <app-drug-window></app-drug-window>
+      </ng-container>
+    </div>
+  </nz-content>
+  <nz-footer>直播区域</nz-footer>
+</nz-layout>
+
+<nz-modal [nzWidth]="740" [(nzVisible)]="wssService.selectScreen" nzTitle="共享屏幕" [nzClosable]="true" (nzOnCancel)="wssService.selectScreen = false">
+  <div>
+    <p>桌面</p>
+    <div id="desktop-windows"></div>
+    <p>应用窗口</p>
+    <div id="software-windows"></div>
+  </div>
+  <div *nzModalFooter>
+    <button nz-button nzType="default" (click)="wssService.selectScreen = false;">取消</button>
+    <button id="screenOk" nz-button nzType="primary" (click)="wssService.selectScreen = false;">确认</button>
+  </div>
+</nz-modal>
